@@ -1,0 +1,6 @@
+{
+  "name": "taskboard-frontend",
+  "private": true,
+  "scripts": { "build": "tsc", "watch": "tsc -w" },
+  "devDependencies": { "typescript": "^5.4.0" }
+}
