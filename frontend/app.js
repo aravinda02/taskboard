@@ -1,16 +1,10 @@
-interface Task {
-  id: number;
-  title: string;
-  done: boolean;
-}
-
-const list = document.getElementById("tasks") as HTMLUListElement;
-const input = document.getElementById("title") as HTMLInputElement;
-const addButton = document.getElementById("add") as HTMLButtonElement;
+const list = document.getElementById("tasks");
+const input = document.getElementById("title");
+const addButton = document.getElementById("add");
 
 async function loadTasks() {
   const response = await fetch("/api/tasks");
-  const tasks: Task[] = await response.json();
+  const tasks = await response.json();
 
   list.innerHTML = "";
   for (const task of tasks) {
